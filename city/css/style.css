@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #222;
+}
+#city{
+    background: url(http://artemdemo.me/blog/wp-content/uploads/2014/10/css-background-repeatable-animation.jpg) 0 0 repeat-x;
+    width: 100%;
+    height: 416px;
+    position: relative;
+    overflow: hidden;
+    -webkit-animation: move-city 25s infinite linear;
+}
+#character{
+    background: url(http://artemdemo.me/blog/wp-content/uploads/2014/10/character.png) no-repeat;
+    background-size: 100%;
+    width: 32px;
+    height: 70px;
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    -webkit-animation:  
+        move-guy-y 10s infinite,
+        move-guy-x 10s infinite linear;
+}
+#glow{
+    background: yellow;
+    width: 32px;
+    height: 70px;
+    border-radius: 100%;
+    position: absolute;
+    box-shadow: 0 0 15px yellow;
+    opacity: 0;
+    bottom:0;
+    left: 0;
+    -webkit-animation:  
+        move-guy-y 10s infinite,
+        move-guy-x 10s infinite linear,
+        guy-glow 10s infinite;
+}
+.bullet{
+    background: #fff;
+    width: 10px;
+    height: 4px;
+    border-radius: 100%;
+    position: absolute;
+    opacity: 0;
+    left: 32px;
+    box-shadow: 0 0 5px yellow;
+    -webkit-animation: shooting 10s infinite linear;
+}
+#bullet-1{
+    top:230px;
+}
+#bullet-2{
+    top:235px;
+    -webkit-animation: shooting 10s 0.05s infinite linear;
+}
+
+
+/*---------animation---------*/
+@-webkit-keyframes move-city {
+    0%   {background-position: 0 0;}
+    100% {background-position: -1024px 0;}
+}
+
+@-webkit-keyframes move-guy-y{
+    0%   {bottom:0;     }
+    10%  {bottom: 150px;}
+    20%  {bottom:0;     }
+    30%  {bottom: 150px;}
+    40%  {bottom:0;     }
+    50%  {bottom: 150px;}
+    60%  {bottom:0;     }
+    70%  {bottom: 150px;}
+    80%  {bottom:0;     }
+    90%  {bottom: 150px;}
+    100% {bottom: 0;    }
+}
+
+@-webkit-keyframes move-guy-x{
+    from{left:0%;}
+    to  {left: 100%;}
+}
+
+@-webkit-keyframes guy-glow{
+    20% {opacity: 0;}
+    30% {opacity: 1;}
+    50% {opacity: 0;}
+}
+@-webkit-keyframes shooting{
+    29.9%{opacity: 0;}
+    30%{opacity: 1; left: 32%}
+    100%{left: 500%;}
+}
+
+

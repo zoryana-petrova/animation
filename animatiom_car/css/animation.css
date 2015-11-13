@@ -1,0 +1,28 @@
+
+.cloud {
+    animation: landscape 120s infinite linear;
+/*     -webkit-animation: landscape 120s infinite;*/
+}
+
+.horizont {
+    animation: landscape 35s  infinite linear;
+}
+
+.hill {
+    animation: landscape 20s infinite linear;
+}
+
+.grass {
+    animation: landscape 10s infinite linear;
+}
+
+.grass2 {
+    animation: landscape 5s infinite linear;
+}
+
+.whell1, .whell2 {
+    animation: whell 1s infinite linear reverse;
+}
+.trailer{
+    animation: trailer 0.5s infinite linear alternate;
+}
